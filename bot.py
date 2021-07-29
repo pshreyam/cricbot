@@ -38,7 +38,9 @@ async def send_fixtures(ctx, *args):
                 value=fixture['date']
             )
 
-    await ctx.send(embed=fixtures)
+        await ctx.send(embed=fixtures)
+
+    await ctx.send('Sorry, I couldn\'t find any fixture.')
 
 @bot.command(name='results')
 async def send_results(ctx, *args):
@@ -57,7 +59,9 @@ async def send_results(ctx, *args):
                 value=result['utc_date']
             )
 
-    await ctx.send(embed=results)
+        await ctx.send(embed=results)
+
+    await ctx.send('Sorry, I couldn\'t find any result.')
 
 @bot.command(name='score')
 async def send_match_score(ctx, *args):
