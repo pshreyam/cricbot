@@ -14,12 +14,14 @@ load_dotenv()
 
 cricapi = cricapi.Cricapi(os.getenv('CRICAPI_KEY'))
 
+
 def format_date(date):
     ''' Format date for quick calculation '''
 
     split_date = date.split()
     split_date[1] = split_date[1][:3]
     return datetime.strptime(' '.join(split_date), '%d %b %Y')
+
 
 def get_fixtures():
     ''' Get the fixtures for 7 days time '''
@@ -34,6 +36,7 @@ def get_fixtures():
             })
 
     return fixtures
+
 
 def get_results():
     ''' Get the recently concluded or ongoing matches '''
@@ -61,6 +64,7 @@ def get_results():
                 results.append(formatted_data)
 
     return results
+
 
 def get_score(match_id):
     ''' Get the score for a requested match '''

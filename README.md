@@ -2,6 +2,9 @@
 
 Crichelper is a simple discord bot to help users with cricket fixtures and scores.
 
+Note: The bot has stopped working due to the breaking changes in the API used
+for getting data.
+
 ## Requirements and dependencies
 
 Requirements are listed in [requirements.txt](./requirements.txt).
